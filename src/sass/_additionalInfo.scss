@@ -1,0 +1,120 @@
+@import 'variables';
+
+
+.AdditionalInfo__wrapper{
+  padding-bottom: 2rem;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.22);
+  border-radius: 0px 0px 5px 5px;
+}
+
+.AdditionalInfo__head{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  &-item{
+    flex-basis: 33rem;
+    .btnCommon-alt{
+      width: 100%;
+    }
+  }
+  &-item.active{
+    color: $textOnBlack;
+    background: $mainColor;
+    .btnCommon-alt{
+      color: $textOnBlack;
+      background: $mainColor;
+    }
+  }
+}
+.AdditionalInfo__content{
+  padding: 2rem;
+  background: #fff;
+  .plan-img{
+    margin: auto;
+  }
+  .title{
+    margin-bottom: 1.5rem;
+    font-family: $medium;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $textOnWhite;
+  }
+  .content{
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #4F4F4F;
+  }
+
+  &-description{
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #DFE0EB;
+  }
+  .MoreInfo_Bc{
+    margin-top: 40px;
+  }
+  &-infrastructure{
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    .title{
+      padding-right: 1rem;
+    }
+    .infrastructure-item:not(:first-child){
+      margin-top: 2rem;
+    }
+  }
+  &-gallery{
+    position: relative;
+    .gallery__img{
+      margin: auto;
+      max-width: 16rem;
+    }
+  }
+  .gallery__arr{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .next{
+    right: 0;
+    background-image: url(../img/slideArrNextBlue.svg);
+  }
+  .prev{
+    left: 0;
+    background-image: url(../img/slideArrPrevBlue.svg);
+  }
+}
+
+@media screen and (max-width: 1059px) {
+  .AdditionalInfo__head-item .btnCommon-alt{
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .AdditionalInfo__head{
+
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #DFE0EB;
+    border-radius: .5rem;
+    &-item{
+      flex-basis: auto;
+      .btnCommon-alt{
+        border: none;
+        color: #ADADAD;
+      }
+    }
+  }
+
+}
+
+
+

@@ -1,0 +1,19 @@
+@import "variables";
+
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5rem;
+    &__block{
+        display: grid;
+        row-gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .intro{
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+}

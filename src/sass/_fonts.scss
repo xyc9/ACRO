@@ -1,0 +1,29 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@font-face {
+    font-family: "Gotham Pro-Medium";
+    src: url("../fonts/GothamPro-Medium.ttf") format("truetype");
+    src: url("../fonts/GothamPro-Medium.eot") format("truetype");
+    src: url("../fonts/GothamPro-Medium.woff") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Gotham Pro-Regular";
+    src: url("../fonts/GothamPro.ttf") format("truetype");
+    src: url("../fonts/GothamPro.eot") format("truetype");
+    src: url("../fonts/GothamPro.woff") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Gotham Pro-Light";
+    src: url("../fonts/GothamPro-Light.ttf") format("truetype");
+    src: url("../fonts/GothamPro-Light.eot") format("truetype");
+    src: url("../fonts/GothamPro-Light.woff") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+}

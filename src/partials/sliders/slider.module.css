@@ -1,0 +1,18 @@
+.title{
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 85%;
+    /* identical to box height, or 31px */
+    justify-self: flex-start;
+    letter-spacing: 2px;
+    /* Синий фон */
+    color: #283655;
+}
+@media screen and (max-width: 768px){
+    .title{
+        display: none;
+    }
+}
+

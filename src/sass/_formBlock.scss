@@ -1,0 +1,82 @@
+@import 'variables';
+
+.formBlock{
+    padding: 4rem 8rem;
+    background: $textOnBlack;
+    box-shadow: 0 .2rem .6rem rgba(0, 0, 0, 0.22);
+    .title{
+        margin-bottom: 1.8rem;
+        font-size: 2.1rem;
+        line-height: 2.5rem;
+        font-family: $medium;
+        font-weight: 700;
+        color: $textOnWhite;
+    }
+    .subtitle{
+        margin-bottom: 4rem;
+        display: flex;
+        align-items: center;
+        &__img{
+            margin-right: 1rem;
+        }
+        &__text-title{
+            margin-bottom: .5rem;
+            font-weight: 700;
+            color: $textOnWhite;
+        }
+        &__text-content{
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: $secondColor;
+        }
+    }
+    .socials{
+        margin-bottom: 3.4rem;
+        &__title{
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+            font-weight: 700;
+            color: $textOnWhite;
+        }
+        &__list{
+            display: flex;
+            align-items: center;
+            column-gap: 1.6rem;
+        }
+        &__icon{
+            width: 1.9rem;
+            stroke: $textOnWhite;
+            fill: none;
+        }
+    }
+    .fields{
+        display: grid;
+        row-gap: 2.8rem;
+        &-btn{
+            padding: 1.2rem 1rem;
+            justify-self: center
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .formBlock{
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .formBlock{
+        .title{
+            text-align: center;
+        }
+        .subtitle{
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+        .socials {
+            margin-bottom: 2rem;
+        }
+    }
+}

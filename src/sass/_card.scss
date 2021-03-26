@@ -1,0 +1,200 @@
+@import "variables";
+
+.mark{
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: -.8rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.7rem;
+    height: 5.4rem;
+    font-family: $medium;
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+    color: $textOnBlack;
+    background: $mainColor;
+    &::after{
+        z-index: 2;
+        position: absolute;
+        right: -.7rem;
+        top: -.3rem;
+        content: '';
+        width: 0;
+        height: 0;
+        border-bottom: 1rem solid $mainColor;
+        border-right: 1rem solid transparent;
+    }
+}
+
+.Card__wrapper{
+
+    &-header{
+        margin-bottom: 2rem;
+        .head{
+            display: flex;
+            align-items: center;
+            column-gap: 1rem;
+        }
+        .head-address.active{
+            color: $mainColor;
+        }
+        .head-address{
+            margin: .3rem 0 1rem;
+            color: $secondColor;
+            cursor: pointer;
+        }
+        .head-address:hover{
+            color: $mainColor;
+        }
+    }
+    &-content{
+        margin-bottom: 2rem;
+    }
+    &-bottom{
+        display: flex;
+        align-items: center;
+        column-gap: 1.5rem;
+        .description{
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            color: $mainColor;
+        }
+    }
+}
+
+.catalog .Card {
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+
+.Card {
+    padding-top: .8rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    .description-text{
+        margin-left: .5rem;
+        font-family: $light;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: $secondColor;
+    }
+    &__img{
+        position: relative;
+        .img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__wrapper-table{
+        display: grid;
+        margin-bottom: 2rem;
+        .table__head,
+        .table__list-item{
+            display: grid;
+            grid-template-columns: repeat(3, 12rem) 9rem;
+            .item-attribute{
+                border-bottom: 1px solid #DFE0EB;
+            }
+        }
+        .table__list-item{
+            padding: 1rem 0 .5rem;
+
+        }
+
+    }
+    &__content{
+        padding: 2rem 4rem;
+        display: grid;
+        row-gap: 1rem;
+        border-top: 1px solid #DFE0EB;
+        border-right: 1px solid #DFE0EB;
+        border-bottom: 1px solid #DFE0EB;
+        background: $textOnBlack;
+        box-shadow: 0 .2rem .6rem rgba(0, 0, 0, 0.22);
+        border-radius: 5px;
+        .content-title{
+            font-family: $medium;
+            font-size: 2.1rem;
+            line-height: 2.5rem;
+            color: $textOnWhite;
+        }
+        .content-subtitle{
+            font-family: $medium;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: $textOnWhite;
+        }
+        .content-text{
+            color: #4F4F4F;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .Card{
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Card {
+        grid-template-columns: 1fr 2fr;
+        &__img{
+            order: 1;
+            .img{
+                height: 27rem;
+                width: 27rem;
+            }
+        }
+        &__content{
+            padding: 1rem 2rem;
+            order: 2;
+            border: none;
+            box-shadow: none;
+        }
+    }
+}
+
+@media screen and (max-width: 638px) {
+    .Card {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        &__img{
+            justify-self: start;
+        }
+    }
+}
+@media screen and (max-width: 568px) {
+    .hiddenMobile{
+        display: none;
+    }
+    .Card{
+        &__img{
+            //justify-self: auto;
+            justify-self: center;
+            .img{
+                width: 30rem;
+                height: 100%;
+            }
+        }
+        &__wrapper-table{
+            display: grid;
+            margin-bottom: 2rem;
+           /* .table__head,
+            .table__list-item {
+                display: grid;
+                grid-template-columns: repeat(2, 10rem);
+            }*/
+            .table__head,
+            .table__list-item {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+

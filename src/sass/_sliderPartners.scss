@@ -1,0 +1,15 @@
+@import "variables";
+
+
+.sliderPartner{
+    display: flex;
+    align-items: center;
+    &__img{
+        height: 100%;
+        filter: grayscale(1);
+        transition: .3s;
+    }
+    &__img:hover{
+        filter: none;
+    }
+}

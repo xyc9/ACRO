@@ -1,0 +1,66 @@
+@import 'variables';
+
+
+.mapWrapper{
+    position: relative;
+}
+
+.contactMap{
+    position: relative;
+    width: 100%;
+    height: 56.4rem;
+}
+.contactMap--attribute{
+    position: relative;
+    height: 35rem;
+    margin-bottom: 2rem;
+    &__btn{
+        z-index: 3;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+    }
+}
+.contactMap-block{
+    z-index: 3;
+    position: absolute;
+    right: 3rem;
+    bottom: 3rem;
+    padding: 2rem 3.7rem;
+    background: #fff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.22);
+    border-radius: .5rem;
+    .title{
+        margin-bottom: 1.5rem;
+    }
+    .content{
+        display: grid;
+        row-gap: 1.8rem;
+        .subtitle{
+            font-family: $medium;
+        }
+        .socials-list{
+            display: flex;
+            column-gap: 2rem;
+            .socials-icon{
+                width: 2.4rem;
+                fill: none;
+                stroke: $boldColor;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .contactMap{
+        height: 30rem;
+    }
+    .contactMap-block{
+        margin-top: 2rem;
+        position: static;
+        text-align: center;
+        .socials-list{
+            justify-content: center;
+        }
+    }
+}

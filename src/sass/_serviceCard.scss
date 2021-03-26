@@ -1,0 +1,43 @@
+@import "variables";
+
+
+.serviceCard-wrapper{
+    position: relative;
+    border-radius: 8px;
+    .serviceCard-img::before{
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+
+    }
+
+    .img{
+        height: 100%;
+        width: 100%;
+
+    }
+    .serviceCard-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        .title{
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.1rem;
+            line-height: 2.5rem;
+            font-family: $medium;
+            color: $mainColor;
+        }
+        .btnCommon-alt{
+            max-width: 15rem;
+            margin: auto;
+        }
+    }
+}
